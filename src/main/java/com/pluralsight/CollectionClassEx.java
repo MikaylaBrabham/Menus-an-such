@@ -15,6 +15,8 @@ public class CollectionClassEx {
         kids.add("sally");
         kids.add("timmy");
 
+        kids.set(1, "angelica");
+
         //print out the list
         System.out.println(kids);
 
@@ -24,7 +26,14 @@ public class CollectionClassEx {
             // use get() to get it by the index
             System.out.println(kids.get(i) );
         }
-        // use the for-each
+
+        //manipulate the list to make the names all uppercase
+        kids.set(i, kids.get(i).toUpperCase());
+
+        }
+    // remove the middle child
+       // kids.remove(index1);
+        // use the for-each to loop over the list again
         int i = 1;
         for (String kid : kids){
             System.out.println(i + "." + kid);
@@ -32,6 +41,7 @@ public class CollectionClassEx {
 
 
             // .size is the length of the list, return number of
+            // set takes positions and changes the value at that position
         }
 
     }
