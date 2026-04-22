@@ -29,6 +29,49 @@ public class MenusAndSuch {
             case 3 -> System.out.println("You want to exit this nonsense");
             system.exit(0);
             default -> System.out.println("Invalid selection try again");
+
+        }
+    }
+}
+public static void viewInventory(){
+    System.out.println("here is the inventory");
+}
+
+public static void manageCustomers(){
+    System.out.println("here are the customers");
+    boolean appRunning = true;
+    while(appRunning){
+        System.out.println("""
+                what do you want to do?
+                    1. view customers
+                    2. add customer
+                    3. remove customer
+                    4. return to main menu
+                    Make your selection:
+                
+                
+                """);
+        int manageCustomersChoice = userInputThing.nextInt();
+        System.out.println("""
+                case 1 ->  view customers
+                case 2 ->  add a customer
+                case 3 ->  go back to the main menu
+                """);
+
+        int menuChoice = userInputThing.nextInt();
+        switch(menuChoice) {
+            case 1:
+                System.out.println("Here are the customers");
+                break;
+            case 2:
+                System.out.println("Add a customer");
+                break;
+            case 3:
+                System.out.println("Returning to main menu");
+                appRunning = false;
+                break;
+            default:
+                System.out.println("Invalid selection try again");
         }
     }
 }
